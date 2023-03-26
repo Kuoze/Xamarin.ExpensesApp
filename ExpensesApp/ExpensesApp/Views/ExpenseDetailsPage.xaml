@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ExpensesApp.ViewModels"
+             x:Class="ExpensesApp.Views.ExpenseDetailsPage"
+             Title="{Binding Source={x:StaticResource vm}, Path=Expense.Name}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:ExpenseDetailsVM x:Key="vm" />
+            <Style TargetType="Label" x:Key="nameLbl">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="30" />
+            </Style>
+            <Style TargetType="Label" x:Key="amountLbl">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="#05A8AA" />
+            </Style>
+            <Style TargetType="Label" x:Key="dataLbl">
+                <Setter Property="FontAttributes" Value="Bold" /> 
+            </Style>
+            <Style TargetType="Label" x:Key="categoryLbl">
+                <Setter Property="TextColor" Value="#05A8AA"/>
+                <Setter Property="FontAttributes" Value="Italic" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="16,16,16,0" BindingContext="{StaticResource vm}">
+            <Label Text="{Binding Expense.Amount, StringFormat='{0:c}'}" Style="{StaticResource amountLbl}" />
+            <Label Text="{Binding Expense.Name}" Style="{StaticResource nameLbl}" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Expense.Date, StringFormat='{0:dd/MM/yyyy}'}" Style="{StaticResource dataLbl}" />
+                <Label Text="{Binding Expense.Category}" Style="{StaticResource categoryLbl}" />
+            </StackLayout>
+            <Label Text="{Binding Expense.Description}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
