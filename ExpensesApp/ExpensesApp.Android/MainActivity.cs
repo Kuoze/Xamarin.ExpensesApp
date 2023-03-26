@@ -5,6 +5,9 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using System.IO;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace ExpensesApp.Droid
 {
@@ -21,7 +24,7 @@ namespace ExpensesApp.Droid
             string db_name = "expenses_db.db3";
             string folder_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string full_path = Path.Combine(folder_path, db_name);
-
+            AppCenter.Start("\"0c2bb54a-42c4-484a-af15-792b50b28d2c\"", typeof(Analytics), typeof(Crashes));
             LoadApplication(new App(full_path));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

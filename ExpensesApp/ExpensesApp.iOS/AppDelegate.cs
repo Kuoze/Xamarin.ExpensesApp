@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 using Foundation;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using UIKit;
 
 namespace ExpensesApp.iOS
@@ -29,6 +30,8 @@ namespace ExpensesApp.iOS
             string full_path = Path.Combine(folder_path, db_name);
 
             LoadApplication(new App(full_path));
+
+            AppCenter.Start("\"d17f7402-07a0-4b62-a6d9-36a3e16a8682\"", typeof(Analytics), typeof(Crashes));
 
             return base.FinishedLaunching(app, options);
         }

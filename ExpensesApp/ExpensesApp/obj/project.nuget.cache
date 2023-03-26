@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "i0UEdcc4fEbE9NsgqpOvsW4/hyBb5LaWUUK5cmeP6qmGw0IkAN8JPT/q4Xtfhxk82Tj2y5brQoflsGeL5hk1xw==",
+  "dgSpecHash": "UNiBdXO8Sf/83OETZeBm6eMA7i+HeTPO8GQ6PoFGkBASF7agCEUxuAaOIE5RMW3ZOOV5V74vc2G8jOr/MzyzQA==",
   "success": true,
   "projectFilePath": "C:\\Feina\\Xamarin\\ExpensesApp\\ExpensesApp\\ExpensesApp\\ExpensesApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Carles\\.nuget\\packages\\microsoft.appcenter\\5.0.1\\microsoft.appcenter.5.0.1.nupkg.sha512",
+    "C:\\Users\\Carles\\.nuget\\packages\\microsoft.appcenter.analytics\\5.0.1\\microsoft.appcenter.analytics.5.0.1.nupkg.sha512",
+    "C:\\Users\\Carles\\.nuget\\packages\\microsoft.appcenter.crashes\\5.0.1\\microsoft.appcenter.crashes.5.0.1.nupkg.sha512",
     "C:\\Users\\Carles\\.nuget\\packages\\microsoft.bcl\\1.1.6\\microsoft.bcl.1.1.6.nupkg.sha512",
     "C:\\Users\\Carles\\.nuget\\packages\\microsoft.bcl.async\\1.0.165\\microsoft.bcl.async.1.0.165.nupkg.sha512",
     "C:\\Users\\Carles\\.nuget\\packages\\microsoft.bcl.build\\1.0.10\\microsoft.bcl.build.1.0.10.nupkg.sha512",
